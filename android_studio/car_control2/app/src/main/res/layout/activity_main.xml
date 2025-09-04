@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/iv_camera_feed"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#000000"
+        android:elevation="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <SeekBar
+        android:id="@+id/camLeftRightCompassHud"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="150dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="100dp"
+        android:background="@null"
+        android:max="180"
+        android:progress="90"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.188" />
+
+    <View
+        android:id="@+id/center_mark_view_left_right"
+        android:layout_width="2dp"  android:layout_height="10dp" android:background="#FF0000" app:layout_constraintTop_toTopOf="@+id/camLeftRightCompassHud"
+        app:layout_constraintBottom_toBottomOf="@+id/camLeftRightCompassHud"
+        app:layout_constraintStart_toStartOf="@+id/camLeftRightCompassHud"
+        app:layout_constraintEnd_toEndOf="@+id/camLeftRightCompassHud"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+
+    <SeekBar
+        android:id="@+id/camUpDownCompassHud"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="109dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="@null"
+        android:max="180"
+        android:min="95"
+        android:progress="150"
+        android:rotation="-270"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.098" />
+
+    <View
+        android:id="@+id/center_mark_view_up_down"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:background="#FF0000"
+
+        app:layout_constraintTop_toTopOf="@+id/camUpDownCompassHud"
+        app:layout_constraintBottom_toBottomOf="@+id/camUpDownCompassHud"
+        app:layout_constraintStart_toStartOf="@+id/camUpDownCompassHud"
+        app:layout_constraintEnd_toEndOf="@+id/camUpDownCompassHud"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.80" />
+
+
+
+    <View
+        android:id="@+id/btn_center"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginBottom="65dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_forward"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#888789"
+        android:alpha="0.5"
+        android:elevation="10dp"
+        android:text="↑"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_center"
+        app:layout_constraintEnd_toEndOf="@id/btn_center"
+        app:layout_constraintStart_toStartOf="@id/btn_center" />
+
+    <Button
+        android:id="@+id/btn_backward"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:backgroundTint="#888789"
+        android:alpha="0.5"
+        android:elevation="10dp"
+        android:text="↓"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_center"
+        app:layout_constraintEnd_toEndOf="@id/btn_center"
+        app:layout_constraintStart_toStartOf="@id/btn_center"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:id="@+id/btn_left"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:backgroundTint="#888789"
+        android:alpha="0.5"
+        android:elevation="10dp"
+        android:text="←"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/btn_center"
+        app:layout_constraintTop_toTopOf="@id/btn_center"
+        app:layout_constraintBottom_toBottomOf="@id/btn_center"
+        android:layout_marginEnd="5dp" />
+
+    <Button
+        android:id="@+id/btn_right"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:backgroundTint="#888789"
+        android:alpha="0.5"
+        android:elevation="10dp"
+        android:text="→"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/btn_center"
+        app:layout_constraintTop_toTopOf="@id/btn_center"
+        app:layout_constraintBottom_toBottomOf="@id/btn_center"
+        android:layout_marginStart="5dp" />
+
+    <View
+        android:id="@+id/btn_cam_center"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="65dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_cam_forward"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#FF018786"
+        android:alpha="0.5"
+        android:elevation="10dp"
+        android:text="↑"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_cam_center"
+        app:layout_constraintEnd_toEndOf="@id/btn_cam_center"
+        app:layout_constraintStart_toStartOf="@id/btn_cam_center" />
+
+    <Button
+        android:id="@+id/btn_cam_backward"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FF018786"
+        android:alpha="0.5"
+        android:elevation="10dp"
+        android:text="↓"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/btn_cam_center"
+        app:layout_constraintStart_toStartOf="@id/btn_cam_center"
+        app:layout_constraintTop_toBottomOf="@id/btn_cam_center" />
+
+    <Button
+        android:id="@+id/btn_cam_left"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="#FF018786"
+        android:alpha="0.5"
+        android:elevation="10dp"
+        android:text="←"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_cam_center"
+        app:layout_constraintEnd_toStartOf="@id/btn_cam_center"
+        app:layout_constraintTop_toTopOf="@id/btn_cam_center" />
+
+    <Button
+        android:id="@+id/btn_cam_right"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:backgroundTint="#FF018786"
+        android:alpha="0.5"
+        android:elevation="10dp"
+        android:text="→"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/btn_cam_center"
+        app:layout_constraintTop_toTopOf="@id/btn_cam_center"
+        app:layout_constraintBottom_toBottomOf="@id/btn_cam_center" />
+
+    <Button
+        android:id="@+id/btn_mic"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="650dp"
+        android:layout_marginBottom="80dp"
+        android:alpha="0.5"
+        android:backgroundTint="#FF5722"
+        android:contentDescription="mic_btn"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
